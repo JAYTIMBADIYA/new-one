@@ -86,7 +86,7 @@ const ProductList = () => {
         Product Store
       </h1>
       
-      <div className="flex justify-between items-center mb-6 space-x-4">
+      <div className=" items-center mb-6 ">
         {/* Search Input */}
         <input
           type="text"
@@ -97,8 +97,8 @@ const ProductList = () => {
         />
 
         {/* Filter Section */}
-        <div className="w-1/3">
-          <div className="flex justify-between items-center mb-2">
+        <div className="w-1/3 max-sm:w-full mt-4">
+          <div className="flex justify-between  items-center mb-2">
             <label htmlFor="priceRange" className="text-sm text-gray-600">
               Price Range
             </label>
@@ -126,7 +126,7 @@ const ProductList = () => {
             onChange={(e) => setMaxPrice(Number(e.target.value))}
             className="w-full mt-2"
           />
-          <div className="mt-6 text-center">
+          <div className=" text-center">
         <p className="text-xl font-semibold text-gray-800">
           Average Product Price: ${avgPrice}
         </p>
@@ -136,10 +136,10 @@ const ProductList = () => {
         </div>
         
       </div>
-      <div className="text-end">
+      <div className="">
       <button
         onClick={handlePriceFilter}
-        className="w-full sm:w-1/4 p-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors mt-4"
+        className="w-full sm:w-1/4 p-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-colors mt-4 max-sm:mt-2"
       >
         Apply Price Filter
       </button>
@@ -147,7 +147,7 @@ const ProductList = () => {
 
       
 
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-8 max-sm:mt-6">
         Product List
       </h2>
 
@@ -155,7 +155,7 @@ const ProductList = () => {
         {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-50 to-white p-6 max-sm:p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
           >
             <Link to={`/product/${product.id}`} className="block text-center">
               <img

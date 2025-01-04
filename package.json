@@ -1,9 +1,11 @@
 {
+  "homepage": "https://JAYTIMBADIYA.github.io/new-one",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
+    "package": "^1.0.1",
     "react": "^19.0.0",
     "react-cookie": "^7.2.2",
     "react-dom": "^19.0.0",
@@ -14,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,9 +50,5 @@
   "main": "postcss.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "dummy"
-  }
+  "license": "ISC"
 }

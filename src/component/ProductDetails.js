@@ -19,7 +19,7 @@ const ProductDetails = () => {
   if (!product) return <h2 className="text-center text-2xl">Loading...</h2>;
 
   return (
-    <div className="container mx-auto p-6 bg-gray-50">
+    <div className="container mx-auto p-6 max-sm:p-2 bg-gray-50">
       <h1 className="text-4xl font-bold text-center py-8 text-gray-900">Product Details</h1>
       <div className="container relative mx-auto p-6 bg-gray-50">
         {/* Back Icon */}
@@ -31,13 +31,13 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-lg shadow-lg p-6 mb-8 hover:shadow-xl transition-shadow duration-300">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-lg shadow-lg p-6 max-sm:p-2 mb-8 hover:shadow-xl transition-shadow duration-300">
         {/* Product Images Section */}
         <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-white">
           <img
             src={selectedImage}
             alt={product.title}
-            className="w-full h-[500px] object-cover rounded-lg shadow-md mb-4 transition-transform transform hover:scale-105 duration-300"
+            className="w-full h-[500px] max-sm:h-[300px] object-cover rounded-lg shadow-md mb-4 transition-transform transform hover:scale-105 duration-300"
           />
           <div className="flex space-x-2 overflow-x-auto">
             {product.images.map((image, index) => (

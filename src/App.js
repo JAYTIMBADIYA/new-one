@@ -19,7 +19,7 @@
 
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductDetails from './component/ProductDetails';
 import ProductList from './component/ProductList';
 import Navbar from './component/Navbar';
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className="App bg-gray-50 min-h-screen">
+      <div className="App bg-gray-50">
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
